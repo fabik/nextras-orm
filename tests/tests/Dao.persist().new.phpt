@@ -24,3 +24,4 @@ $bookDao->persist($book);
 
 $book = $bookDao->findById($book->id);
 Assert::equal('Super new ORM', $book->title);
+Assert::equal('JAN SKRASEK', $book->author->name);

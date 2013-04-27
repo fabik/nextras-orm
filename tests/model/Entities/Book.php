@@ -61,7 +61,7 @@ class Book extends Nextras\Orm\Entity
 
 	protected function getTags()
 	{
-		return new EntityCollection($this->related('book_tag'), 'Tag');
+		return new EntityCollection($this->related('book_tag'), 'Tag', 'tag');
 	}
 
 }
