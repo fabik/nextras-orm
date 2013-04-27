@@ -46,3 +46,13 @@ $selectionFactory->addMap('Tag', 'tag');
 
 Tester\Helpers::lock(md5('mysql:host=localhost;dbname=nextras_orm_test'), dirname(TEMP_DIR));
 Nette\Database\Helpers::loadFromFile($connection, __DIR__ . "/../db/mysql-init.sql");
+
+
+
+if (!Debugger::$consoleMode) {
+	Debugger::enable(Debugger::DEVELOPMENT, FALSE);
+	Debugger::$strictMode = TRUE;
+	Debugger::$maxDepth = FALSE;
+	Debugger::$maxLen = FALSE;
+	Debugger::$bar->addPanel(new Nette\Database\Diagnostics\ConnectionPanel($connection));
+}
