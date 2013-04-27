@@ -109,18 +109,18 @@ abstract class Entity extends Nette\Object
 
 
 
-	protected function related($key)
+	protected function related($key, $throughColumn = NULL)
 	{
 		$this->needPersist();
-		return $this->row->related($key);
+		return $this->row->related($key, $throughColumn);
 	}
 
 
 
-	protected function ref($key, $throughColumn = NULL)
+	protected function ref($key)
 	{
 		$this->needPersist();
-		return $this->row->ref($key, $throughColumn);
+		return $this->row->ref($key);
 	}
 
 
