@@ -1,0 +1,35 @@
+{
+	"name": "nextras/orm",
+	"type": "library",
+	"description": "ORM framework for Nette\\Database",
+	"keywords": ["nette", "orm", "database", "nextras"],
+	"homepage": "https://github.com/nextras/orm",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Nextras Community",
+			"homepage": "https://github.com/nextras?tab=members"
+		},
+		{
+			"name": "Jan Skrasek",
+			"homepage": "http://jan.skrasek.com"
+		},
+		{
+			"name": "Petr Kessler",
+			"homepage": "http://kesspess.1991.cz"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/nextras/orm/issues"
+	},
+	"require": {
+		"php": ">=5.3.0",
+		"nette/nette": "dev-master"
+	},
+	"require-dev": {
+		"nette/tester": "*"
+	},
+	"autoload": {
+		"psr-0": { "Nextras\\Orm": "" }
+	}
+}
